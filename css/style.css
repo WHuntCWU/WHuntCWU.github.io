@@ -1,209 +1,255 @@
-/* General setup */
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
 
-* {
-    box-sizing: border-box;
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* Spacing */
+li{}
+/* Imported Typfaces */
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/sans-serif/lato-regular.ttf);
+    font-weight: normal;
+    font-weight: normal;
 }
 
-html {
-    font-size:16px;
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/sans-serif/montserrat-regular.ttf);
+    font-weight: normal;
+    font-weight: normal;
 }
 
-body {
+@font-face {
+    font-family: Opensans;
+    src: url(../fonts/sans-serif/opensans-regular.ttf);
+    font-weight: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/sans-serif/roboto-regular.ttf);
+    font-weight: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Josefinslab;
+    src: url(../fonts/serif/josefinslab-regular.ttf);
+    font-weight: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Robotoslab;
+    src: url(../fonts/serif/robotoslab-regular.ttf);
+    font-weight: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Rozhaone;
+    src: url(../fonts/serif/rozhaone-regular.ttf);
+    font-weight: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Ultra;
+    src: url(../fonts/serif/ultra-regular.ttf);
+    font-weight: normal;
+    font-weight: normal;
+}
+
+/* Box, Layout and Border */
+nav{
+    border-bottom:#0000;
+    border-top: #0000;
+}
+ul{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    width: 0px;
+    border-top:#0000;
+    border-bottom:#0000;
+}
+
+li{
+    margin-right: 50px;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+body{
     margin: 1.5rem auto;
-    width:90%;
-    min-width:56.25rem;
+    width: 90%
 }
 
-/* Layout */
+.main-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 90%;
+}
 
-main {
-    overflow:auto;
-    min-width:45rem;
+article{
+    width:auto;
+}
+
+.article-image{
+    float: left;
+    min-width: 300px;
+    width: 325px;
+    margin: 0;
+    margin-right: 10px; 
+    img{
+        width: auto;
+        height: auto;
+        max-width: 300px;
+    }
+}
+
+.subsection{
+    display:flex;
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    img{
+        width: auto;
+        height: auto;
+        max-width: 250px;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+aside{
+    grid-column: 2;
+    width: auto;
+    column-rule: 2px;
+    img{
+        width: auto;
+        height: auto;
+        max-width: 300px;
+    }
+
+}
+
+
+
+/* Style */
+html{
+    font-family: Roboto;
+    font-size: 12px;
+}
+h1{
+    font-family: Lato;
+    text-shadow: 2px 2px #0000;
+    text-align: center;
+}
+
+li{
+    text-decoration: none;
+}
+
+.highlight
+{
+    font-family: Ultra;
+    text-shadow: 2px 2px #0000;
+    background-color: #82334C;
+    color: antiquewhite;
+    shape-outside: margin-box;
+    margin-left: 5px;
+    margin-right:5px;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+li{
+    list-style-type: none;
+    a{
+        text-decoration: none;
+        color:#27476E;
+        font-size: 16px;
+    }
     
 }
 
-section {
-    float: left;
-    min-width: 22.5rem;
-    width:50%;
+time{
+    font-style: italic;
+    font-size: 8px;
+    color:gray;
 }
 
-figure {
-    width:60%;
-    margin:0 10% 0 0;
-    float:left;
+.attribution{
+    float: right;
+    text-align: right;
+    
 }
 
-figure img {
-    width:100%;
-    max-width:25rem;
+button{
+    font-family: ultra;
+    font-size: 16px;
+    color:antiquewhite;
+    background-color: #27476E;
 }
 
-figcaption {
-    margin:.375rem 0;
-}
-
-.long-list {
-    margin-top:0;
-}
-
-nav {
-    float: left;
-    width:11.25rem;
-}
-
-footer {
-    clear: both;
-    margin-top:1.5rem;
-}
-
-section, aside, nav, footer {
-  padding: .5rem;
-}
-
-/* header and footer */
-
-header, footer {
-  border-top: .125rem solid #33658A;
-  border-bottom: .125rem solid #33658A;
-}
-
-/* ------ START WRITING YOUR CODE BELOW THIS LINE ------ */
-
-/* NO changes should be made to any of the code above. */
-
-/* NOTE: While you will be using some of the same CSS properties, the VALUES 
-   may need to be different in order to style the page correctly. */
-
-
-
-/* Imported Typfaces */
-@font-face {
-    font-family: Josefinslab;
-    src: url(../fonts/josefinslab-regular.ttf);
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: Montserrat;
-    src: url(../fonts/montserrat-regular.ttf);
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Typography Styles */
-
-html {
-    font-family: Montserrat, Tahoma, Verdana, sans-serif;
-}
-
-h1 {
-    font-family: Josefinslab,'Times New Roman', Times, serif;
-    letter-spacing: 2px;
-    font-size: 60px;
-    margin: 18px;
-    text-align: center;
-}
-
-h2 {
-    font-family: "Josefinslab",'Times New Roman', Times, serif;
-    letter-spacing: 2px;
-    font-size: 24px;
-}
-
-h2+p {
-    text-indent:24px;
-}
-
-p {
+aside > p > a > .expand{
     font-size: 12px;
-    letter-spacing: .5px;
-    word-spacing: 2px;
-}
-
-li {
-    font-size: 12px;
-    letter-spacing: .5px;
-    word-spacing: 2px;
-}
-
-figcaption {
-    font-size: 12px;
-    margin-bottom: 32px;
-}
-
-/* Link Styling */
-
-a{
-    outline-style:none;
-}
-
-a:link, a:visited{
-    color:#33658A;
-}
-
-a:focus, a:hover{
     text-decoration: none;
 }
 
-/* List Styling */
-
-ul{
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
-    list-style-type: square;
+.subsection > figure > figcaption{
+    background-color: #EEEEDD;
 }
-
-ol{
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
-    list-style-type: lowercase;
-}
-
-.long-list a:hover{
-    transform: uppercase;
-}
-
-/* Navigation Menu */
-
-nav {
-    padding-left: 0px;
-    margin-top: 4px;
-}
-
-nav a{
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    line-height: 3;
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 24px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #33658A;
-}
-
-nav a:focus, nav a:hover{
-    color: #FFF;
-    background-color: #33658A;
-}
-
-nav a:active{
-    color: #FFF;
-    background-color: #000;
-}
-
-/* Footer Styles */
-
-footer{
-    text-align: center;
-}
-
-
-
 
